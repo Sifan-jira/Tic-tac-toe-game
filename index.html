@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            text-align: center;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 2px;
+            width: 400px;
+            height: 400px;
+
+        }
+        button{
+            background-color: rgb(4, 167, 237);
+            border: none;
+            border-radius: 7px;
+            font-size: 40px;
+
+        }
+        button:hover{
+            background-color: rgb(5, 180, 255);
+            cursor: pointer;
+        }
+        button:active{
+             background-color: rgb(70, 199, 255);
+        }
+        .reset-btn{
+            width: 160px;
+            height: 40px;
+            font-size: larger;
+            background-color: #e22c2cea;
+            color: white;
+        }
+        .reset-btn:hover{
+            background-color: #f50000ea;
+        }
+        .reset-btn:active{
+            background-color: #ff1818ea;
+            box-shadow: 3px 7px 10px rgb(33, 1, 1, 0.3);
+        }
+        .turn-display.X-turn { color: #e74c3c; }   /* Red for X */
+        .turn-display.O-turn { color: #3498db; }
+
+        .turn-display{
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1 style="display: block;">Tic Tac Toe Game</h1> -->
+    <div class="container">
+        <button data-index="0" class="click-btn"></button>
+        <button data-index="1" class="click-btn"></button>
+        <button data-index="2" class="click-btn"></button>
+        <button data-index="3" class="click-btn"></button>
+        <button data-index="4" class="click-btn"></button>
+        <button data-index="5" class="click-btn"></button>
+        <button data-index="6" class="click-btn"></button>
+        <button data-index="7" class="click-btn"></button>
+        <button data-index="8" class="click-btn"></button>
+    </div>
+    <p class="turn-display"></p>
+    <button class="reset-btn">Reset the Game</button>
+    <script src="game.js"></script>
+</body>
+</html>
